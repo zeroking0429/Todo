@@ -4,16 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo</title>
+    <script src="app.js"></script>
   </head>
   <body>
     <div class="wrapper">
-      <form>
+      <form onSubmit="onSubmit(event);">
         <h1 class="title">Todo</h1>
         <input
           type="text"
           name="name"
           class="name"
           placeholder="name"
+          onChange="onChange(event);"
           required
         />
         <input type="submit" value="Submit" />
