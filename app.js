@@ -1,7 +1,7 @@
 const fetchedName = localStorage.getItem("name");
 
 if (fetchedName) {
-  window.location.href = "/todo/todo";
+  window.location.href = "./todo/todo";
 }
 
 let name = "";
@@ -15,5 +15,5 @@ const onSubmit = (e) => {
   e.preventDefault();
   localStorage.setItem("name", name);
   localStorage.setItem("todoList", "{}");
-  window.location.href = "/todo/todo";
+  window.location.href = "./todo/todo";
 };
