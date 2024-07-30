@@ -11,6 +11,8 @@ let cnt = Object.keys(todoList).length + 1;
 
 const update = () => {
   const todoListElement = document.getElementById("todo-list");
+  const todoListDiv = document.createElement("div");
+  todoListDiv.className = "todo-list-div";
   todoListElement.innerHTML = ""; // Clear the list before updating
 
   Object.keys(todoList).forEach((key) => {
@@ -27,8 +29,9 @@ const update = () => {
       }
     });
 
-    todoListElement.appendChild(checkBox);
-    todoListElement.appendChild(li);
+    todoListElement.appendChild(todoListDiv);
+    todoListDiv.appendChild(checkBox);
+    todoListDiv.appendChild(li);
   });
 };
 
