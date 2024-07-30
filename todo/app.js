@@ -1,4 +1,5 @@
 let todoList = {};
+const name = localStorage.getItem("name");
 
 try {
   todoList = JSON.parse(localStorage.getItem("todoList")) || {};
@@ -36,6 +37,7 @@ const update = () => {
 };
 
 window.onload = () => {
+  document.getElementById("title").innerHTML = `Hello, ${name}`;
   update();
 };
 
