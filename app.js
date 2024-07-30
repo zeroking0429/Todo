@@ -14,5 +14,6 @@ const onChange = (e) => {
 const onSubmit = (e) => {
   e.preventDefault();
   localStorage.setItem("name", name);
+  localStorage.setItem("todoList", "{}");
   window.location.href = "/todo";
 };
